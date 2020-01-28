@@ -4,6 +4,7 @@ layout: default
 
 <button name="button" onclick="http://www.google.com">Click me</button>
 
+for test 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
