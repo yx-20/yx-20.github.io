@@ -17,14 +17,46 @@ body {font-size:16px;}
 <body>
 
 <!-- header-->
-<div class="w3-pale-red w3-padding-32 w3-center">
+<div class="w3-pale-yellow w3-padding-32 w3-center">
   <h1 class="w3-jumbo">Bank Marketing Analysis</h1>
 </div>
   <!-- !PAGE CONTENT! -->
   <div class="w3-row w3-container w3-margin-top">
     <div class="w3-container">
     <h2>Introduction</h2>
-      <p>TBD</p>
+      <p>The bank has high demand on knowing whether a client is a potential customer or not at a lower cost.
+        The project aims to help bank predict the potential customers list. In advance, label the potential customers' level to express difficulty.
+        The higher the level, the more time need to spend to successfully marketing.
+      </p>
+    <h2>Dataset</h2>
+      <p>The <a href="https://archive.ics.uci.edu/ml/datasets/Bank+Marketing" title="dataset" target="_blank" class="w3-hover-opacity">dataset</a> is from a Portuguese Banking Institution with 41188 examples. Each example has 20 attributes include the personal information, marketing information and financial information.
+      </p>
+      <div class="image">
+        <img src="assets/bm1.jpg" style="width:90%;min-height:200px" class="center">
+      </div>
+    <h2>Experiments</h2>
+      <p>Data Preprocessing</p>
+      <ul>
+        <li>clean data</li>
+        <li>sampling</li>
+        <li>standard scaler</li>
+        <li>categorical encoder</li>
+      </ul>
+      <p>Prediction</p>
+      <p>Apply eight models <strong>Naive Bayes</strong>|<strong>Neural Classifier</strong>|
+        <strong>Random Forest</strong>|<strong>Linear SVM</strong>|<strong>KNN</strong>|
+        <strong>Decision Tree</strong>|<strong>Gradient Boosting Classifier</strong>|
+        <strong>Linear Discriminant Analysis</strong> then compare models' performance depend on classifier scores
+        and cross validation scores.
+      </p>
+      <div class="image">
+        <img src="assets/bm2.jpg" style="width:90%;min-height:200px" class="center">
+      </div>
+      <p>Label</p>
+      <p>Label based on probability.</p>
+      <div class="image">
+        <img src="assets/bm3.jpg" style="width:90%;min-height:200px" class="center">
+      </div>
     </div>
 
   <!-- End page content -->
