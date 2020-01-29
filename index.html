@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <title>Yixian Webpage</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 </style>
+
 <body>
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-amber w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Yixian Li</b></h3>
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-amber w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 class="w3-padding-64"><b>Yixian Li</b></h3>
+    </div>
+    <div class="w3-bar-block">
+      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home Page</a>
+      <a href="portfolio.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Portfolio</a>
+      <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+    </div>
+  </nav>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+    <!-- Home Page -->
+    <div class="w3-container" id="Home Page" style="margin-top:80px">
+      <h1 class="w3-xxxlarge w3-text-amber"><b>WELCOME</b></h1>
+      <hr style="width:250px;border:5px solid black" class="w3-round">
+      <p>Hello, my name is Yixian Li. I am a master student in Computer Science.</p>
+      <p>This website is a platform to show my project. If you have any question, please feel free to contact me.</p>
+    </div>
+
+  <!-- End page content -->
   </div>
-  <div class="w3-bar-block">
-    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home Page</a>
-    <a href="portfolio.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Portfolio</a>
-    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-  </div>
-</nav>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
+  <!-- W3.CSS Container -->
+  <div class="w3-light-grey w3-container w3-display-bottomright" style="margin-top:75px;padding-right:58px">
+    <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
+    <span>❤</span> Built with <a href="https://pages.github.com" title="GitHub Pages" target="_blank" class="w3-hover-opacity">GitHub Pages</a>
+  </p></div>
 
-  <!-- Home Page -->
-  <div class="w3-container" id="Home Page" style="margin-top:80px">
-    <h1 class="w3-xxxlarge w3-text-amber"><b>WELCOME</b></h1>
-    <hr style="width:250px;border:5px solid black" class="w3-round">
-    <p>Hello, my name is Yixian Li. I am a master student in Computer Science.</p>
-    <p>This website is a platform to show my project. If you have any question, please feel free to contact me.</p>
-  </div>
+  <script>
+  // Script to open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
 
-<!-- End page content -->
-</div>
-
-<!-- W3.CSS Container -->
-<div class="w3-light-grey w3-container w3-display-bottomright" style="margin-top:75px;padding-right:58px">
-  <p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a>
-  <span>❤</span> Built with <a href="https://pages.github.com" title="GitHub Pages" target="_blank" class="w3-hover-opacity">GitHub Pages</a>
-</p></div>
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
-
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
 
 </body>
 </html>
