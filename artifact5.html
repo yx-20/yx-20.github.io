@@ -37,15 +37,41 @@
         and optimization, we choose algorithms suggested by <a href="https://arxiv.org/abs/1806.05694" title="Zhou et al" target="_blank" class="w3-hover-opacity">Zhou et al</a>.
       </p>
     <h2>My Contribution</h2>
-      <p>★ Demand-supply ratio computation</p>
-      <p>I construct the demand-supply model using Gaussian function. The demand level of one venue is defined by the probability of users going to that venue.
-        First we know the clusters of each user from POPTICS, and each cluster has a center &#8499; and radius ru .
+      <h3>★ Demand-supply ratio computation</h3>
+      <p>I construct the demand-supply model using Gaussian function. </p>
+      <p>The following two figures show how to determine the demand level and supply level.</p>
+      <div class="image">
+        <img src="assets/lcp1.PNG" alt="lcp1 img" style="width:50%;">
+        <div class="w3-small w3-center">Fig1. The demand level of user u on venue x</div>
+      </div>
+      <p>The demand level of one venue is defined by the probability of users going to that venue.
+        First we know the clusters of each user from POPTICS, and each cluster has a center u and radius ru .
         Then we determine that level based on the assumption suggested by Zhou et al such that for a certain user, his/her
         demand for a particular cultural pattern (his/her pattern) is highest at the cluster center and decrease as we move away from the center.
         In general, the demand level of the venue x for user u is computed using the formula suggested by Zhou et al. :
       </p>
       <p>\[d_u(x) = {\frac{1}{\sqrt {2\pi r_u^2}}e^{{-\left( {x - \mu } \right)^2 } \over 2r_u^2}}. \]</p>
-      <p>\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]</p>
+      <p>In Fig. 1, the user u has two clusters enclosed by blue circle and red circle.
+        Each cluster contains several venues where user had been to.
+        To calculate the demand level of venue x, we first determine the cluster the encloses the venue x.
+        In this example, the venue x is in the blue cluster, then we use the blue clusters center and radius to compute the demand level.
+        For each user, we filter out the venues that does not belong to the pattern of this user before passing them to the POPTICS.
+        Therefore, ru is the active range of user u for his/her pattern.
+        The demand for venue x of its own pattern is the sum of demands of all users who have visited x.
+      </p>
+      <div class="image">
+        <img src="assets/lcp2.PNG" alt="lcp2 img" style="width:50%;">
+        <div class="w3-small w3-center">Fig2. An example of computing the supply level of x</div>
+      </div>
+      <p>The supply level of a venue x is defined by the service capability of that venue.
+        The assumption is that the service of a venue x can reach a user u if u has visited x before.
+        Therefore, we determine the set of users who has visited x at least once and compute the average distance, denoted by &#963;,
+        between their active centers (output of POPTICS) and the location of x.
+      </p>
+      <p>\[d_u(x) = {\frac{1}{\sqrt {2\pi \sigma^2}}e^{{-\left( {x - \mu } \right)^2 } \over 2\sigma^2}}. \]</p>
+      <p>The Fig. 2 illustrate an example of computing the distance between centers of uses and x.
+        In this example, there are four users had check-ins at venue x. I calculate the distances between their centers with x.
+      </p>
     </div>
 
   <!-- End page content -->
