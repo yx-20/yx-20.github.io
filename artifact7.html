@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Sleeping Shooter -->
+<!-- 7. Sleeping Shooter -->
 <title>sleepingshooter-yixian</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,14 @@ body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
+</style>
+
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
 
 <body>
@@ -29,11 +37,43 @@ body {font-size:16px;}
       </p>
     <h2>Demo</h2>
     <p>We set up our scene combing the unity hand model and <a href="https://assetstore.unity.com/packages/essentials/tutorialprojects/survivalshootertutoriallegacy40756" title="package environment" target="_blank" class="w3-hover-opacity">package environment</a>.</p>
-    <video width="400" controls>
+    <video width="800" controls>
       <source src="assets/VideoDemo.mp4" type="video/mp4">
     </video>
     <h2>My Contribution</h2>
-    <p>TBD</p>
+    <h3>★ Hand Gesture Recognition</h3>
+    <p>1. Determine gestures</p>
+    <div class="image">
+      <img src="assets/ss1.PNG" alt="ss1 img" style="width:50%;">
+      <div class="w3-small w3-center">Fig1. Three gestures in the game</div>
+    </div>
+    <p>The above figure shows the three gestures I use in the game. The gesture 'a' represents preparing, gesture 'b' represents shooting and gesture 'c' represents frozen.</p>
+    <p>2. Determine feature vectors</p>
+    <div class="image">
+      <img src="assets/ss2.PNG" alt="ss2 img" style="width:50%;">
+      <div class="w3-small w3-center">Fig2. Feature vectors for training SVM</div>
+    </div>
+    <p>The above figure shows five groups of feature vectors.
+      Group P represents plam positions, group D represents distance between fingertips
+      and plam, group A represents angles between adjacent fingers, group F represents
+      distance between pairs of fingers and group J represents distance between pairs of MCP joints.
+    </p>
+
+    <div class="w3-row-padding w3-margin-top">
+    <div class="w3-half">
+    <div class="image">
+      <img src="assets/ss3.PNG" alt="ss3 img" style="height:300px">
+      <div class="w3-small">Fig3. SVM training</div>
+    </div>
+    </div>
+    <div class="w3-half">
+    <div class="image">
+      <img src="assets/ss4.PNG" alt="ss4 img" style="height:300px">
+      <div class="w3-small">Fig4. Recognition structure</div>
+    </div>
+    </div>
+    </div>
+
     </div>
 
   <!-- End page content -->
